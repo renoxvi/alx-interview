@@ -1,3 +1,4 @@
+#!/usr/bin/py3
 def validUTF8(data):
     num_bytes = 0
     for num in data:
@@ -23,14 +24,3 @@ def validUTF8(data):
         num_bytes = max(num_bytes - 1, 0)
 
     return num_bytes == 0
-
-
-# Example usage
-data1 = [65]
-print(validUTF8(data1))  # Output: True
-
-data2 = [80, 121, 116, 104, 111, 110, 32, 105, 115, 32, 99, 111, 111, 108, 33]
-print(validUTF8(data2))  # Output: True
-
-data3 = [9, 5, 7, 6]
-print(validUTF8(data3))  # Output: False
